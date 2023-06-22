@@ -1,3 +1,5 @@
 export type Post = {
-  body: string
+  id: number
+  body: string | null
+  createdById: string
 }

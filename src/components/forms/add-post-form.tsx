@@ -8,16 +8,21 @@ import { addPostAction } from "@/app/_actions/post"
 
 type Post = z.infer<typeof postSchema>
 
-export function AddPostForm() {
+type AddPostFormProps = {
+  userId: string
+}
+
+export function AddPostForm({ userId }: AddPostFormProps) {
   const form = useForm<Post>({
     resolver: zodResolver(postSchema),
   })
 
   async function onSubmit(data: Post) {
-    console.log(data)
-
     try {
-      await addPostAction(data)
+      await addPostAction({
+        ...data,
+        createdById: userId
+      })
     } catch (error) {
       console.error(error)
     }
