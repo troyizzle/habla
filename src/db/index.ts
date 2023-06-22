@@ -3,7 +3,6 @@ import { connect } from "@planetscale/database"
 import { drizzle } from "drizzle-orm/planetscale-serverless"
 
 import * as schema from "./schema"
-console.log(env)
 
 // create the connection
 const connection = connect({
