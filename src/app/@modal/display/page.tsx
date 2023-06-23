@@ -2,23 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useTheme } from "next-themes";
-
-type colorPickerButtonProps = {
-  color: string;
-}
-
-function colorPickerButton({ color }: colorPickerButtonProps) {
-  const { setTheme } = useTheme()
-
-  return (
-    <button
-      onClick={() => setTheme(color)}
-      className="w-1/2 rounded-full p-3 flex justify-center">
-      {color}
-    </button>
-  )
-}
 
 export default function SettingsPage() {
   return (

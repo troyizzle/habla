@@ -19,6 +19,7 @@ export type Post = {
   id: number
   body: string | null
   createdById: string
+  createdAt: string
 }
 
 export type PostWithUser = Post & {
