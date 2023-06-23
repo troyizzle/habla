@@ -8,6 +8,20 @@
       "when": 1687395507819,
       "tag": "0000_happy_titanium_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1687472336261,
+      "tag": "0001_outstanding_vivisector",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1687488130695,
+      "tag": "0002_complex_mauler",
+      "breakpoints": true
     }
   ]
 }

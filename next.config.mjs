@@ -7,7 +7,9 @@ await import("./src/env.mjs")
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  images: {},
+  images: {
+    domains: ["images.clerk.dev"],
+  },
   experimental: {
     serverActions: true,
   },

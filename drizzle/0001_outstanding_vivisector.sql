@@ -1,0 +1,1 @@
+ALTER TABLE `posts` ADD `created_by_id` text NOT NULL;
