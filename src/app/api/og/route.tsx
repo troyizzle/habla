@@ -6,7 +6,6 @@ import { ogImageSchema } from "@/lib/validations/og"
 export const runtime: ServerRuntime = "edge"
 
 export function GET(req: Request) {
-  console.log("hello?")
   try {
     const url = new URL(req.url)
     const parsedValues = ogImageSchema.parse(
