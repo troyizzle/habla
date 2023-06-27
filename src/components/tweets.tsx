@@ -95,7 +95,9 @@ export default function Tweets({ user }: TweetsProp) {
           <div className="hidden md:block">
             <AddPostForm userId={user.id} />
           </div>
-          {user && <Header user={user} />}
+          <div className="block md:hidden">
+            {<Header user={user} />}
+          </div>
           <Suspense fallback={<FeedLoader />}>
             <Feed promise={postsData} />
           </Suspense>
