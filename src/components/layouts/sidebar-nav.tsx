@@ -30,21 +30,21 @@ export function SidebarNav({ items }: SidebarNavProps) {
           >
             <span
               className={cn(
-                "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:bg-muted hover:text-foreground text-lg",
+                "group flex justify-end items-center rounded-md border border-transparent px-2 py-1 text-lg",
                 pathname === item.href
-                  ? "bg-muted font-medium text-foreground"
+                  ? "font-medium text-foreground"
                   : "text-muted-foreground",
                 item.disabled && "pointer-events-none opacity-60"
               )}
             >
-              <Icon className="mr-2 h-4 w-4" aria-hidden="true" />
-              <span className="hidden md:block">{item.title}</span>
+              <Icon className="mr-2 h-6 w-8 hover:bg-muted hover:text-foreground" aria-hidden="true" />
+              <span className="hidden lg:block">{item.title}</span>
             </span>
           </Link>
         ) : (
           <span
             key={index}
-            className="flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground hover:underline"
+            className="flex cursor-not-allowed items-center rounded-md p-2 text-muted-foreground hover:underline"
           >
             {item.title}
           </span>

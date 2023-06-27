@@ -17,7 +17,7 @@ export type NavItemWithChildren = NavItem  & {
 
 export type Post = {
   id: number
-  body: string | null
+  body: string
   createdById: string
   createdAt: string
 }

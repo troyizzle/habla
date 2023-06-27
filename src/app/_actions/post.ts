@@ -5,6 +5,7 @@ import { posts } from "@/db/schema";
 import { postSchema } from "@/lib/validations/post";
 import { Post } from "@/types";
 import { clerkClient } from "@clerk/nextjs";
+import { desc } from "drizzle-orm";
 import { z } from "zod";
 
 async function addUserDataToPosts(posts: Post[]) {
@@ -30,7 +31,9 @@ async function addUserDataToPosts(posts: Post[]) {
 }
 
 export async function getPostsAction() {
-  const postsData = await db.select().from(posts).limit(50)
+  const postsData = await db.select().from(posts)
+  .orderBy(desc(posts.createdAt))
+  .limit(50)
   return await addUserDataToPosts(postsData)
 }
 

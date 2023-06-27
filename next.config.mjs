@@ -8,7 +8,7 @@ await import("./src/env.mjs")
 const config = {
   reactStrictMode: true,
   images: {
-    domains: ["images.clerk.dev"],
+    domains: ["www.gravatar.com", "images.clerk.dev"],
   },
   experimental: {
     serverActions: true,

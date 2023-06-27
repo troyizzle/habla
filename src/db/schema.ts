@@ -9,7 +9,7 @@ import {
 
 export const posts = mysqlTable("posts", {
   id: serial("id").primaryKey(),
-  body: varchar("body", { length: 420 }),
+  body: varchar("body", { length: 420 }).notNull(),
   createdById: text("created_by_id").notNull(),
   createdAt: datetime("createdAt", { mode: "string", fsp: 3}).notNull().default(sql`CURRENT_TIMESTAMP(3)`)
 })
