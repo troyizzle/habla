@@ -1,0 +1,1 @@
+ALTER TABLE `posts` MODIFY COLUMN `body` varchar(420) NOT NULL;
