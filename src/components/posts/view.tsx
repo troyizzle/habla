@@ -1,6 +1,5 @@
 import { PostWithUser } from "@/types"
 import Image from "next/image"
-import Link from "next/link"
 import dayjs from "dayjs"
 
 import relativeTime from "dayjs/plugin/relativeTime"
@@ -23,14 +22,10 @@ export default function PostView({ post }: PostViewProps) {
 
       <div className="flex flex-col">
         <div className="flex gap-1 text-slate-300">
-          <Link href={`/${post.user.id}`}>
-            <span>{`@${post.user.username} `}</span>
-          </Link>
-          <Link href={`/posts/${post.id}`}>
-            <span className="font-thin">{` · ${dayjs(
-              post.createdAt
-            ).fromNow()}`}</span>
-          </Link>
+          <span>{`@${post.user.username} `}</span>
+          <span className="font-thin">{` · ${dayjs(
+            post.createdAt
+          ).fromNow()}`}</span>
         </div>
         <span className="text-2xl">{post.body}</span>
       </div>
