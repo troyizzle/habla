@@ -39,7 +39,7 @@ export function AddPostForm({ userId }: AddPostFormProps) {
   }
 
   return (
-    <div className="border-white border-y-2">
+    <div className="border-slate-900 border-y-2">
       <form onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}>
         <div className="p-2">
           <div className="flex items-center">

@@ -11,7 +11,7 @@ type PostViewProps = {
 
 export default function PostView({ post }: PostViewProps) {
   return (
-    <div key={post.id} className="flex gap-3 border-b border-slate-400 p-4">
+    <div key={post.id} className="flex gap-3 border-b border-slate-900 p-4">
       <Image
         src={post.user.profileImageUrl}
         className="h-14 w-14 rounded-full"

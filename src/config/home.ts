@@ -11,12 +11,6 @@ export const homeConfig: HomeConfig = {
       href: "/",
       icon: 'home',
       items: []
-    },
-    {
-      title: 'Display',
-      href: '/display',
-      icon: "moon",
-      items: []
     }
   ]
 }

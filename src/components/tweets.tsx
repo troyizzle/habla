@@ -69,7 +69,7 @@ type FeedProps = {
 async function Feed({ promise }: FeedProps) {
   const posts = await promise;
 
-  return <div className="flex grow flex-col p-2">
+  return <div className="flex grow flex-col">
     {posts.map((post) => <PostView key={post.id} post={post} />)}
   </div>
 }

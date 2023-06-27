@@ -1,7 +1,6 @@
 import { currentUser } from "@clerk/nextjs";
 import { SidebarNav } from "@/components/layouts/sidebar-nav";
 import { homeConfig } from "@/config/home";
-import ThemePicker from "@/components/theme-picker";
 import Tweets from "@/components/tweets";
 
 export default async function HomePage() {
@@ -18,12 +17,11 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 border-2 border-slate-900">
         <Tweets user={user} />
       </div>
       <div className="w-1/4">
         <div className="hidden lg:block">
-          <ThemePicker />
         </div>
       </div>
     </div>)
