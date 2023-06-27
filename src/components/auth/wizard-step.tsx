@@ -23,7 +23,7 @@ export default function WizardStepForm<T extends FieldValues>({
   return (
     <div>
       <form className="flex flex-col gap-6" onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="flex min-h-[87vh]">
+        <div className="flex min-h-[80vh]">
           <div className="flex flex-col grow">
             <div className="flex items-center">
               {/* Render the back button component */}
