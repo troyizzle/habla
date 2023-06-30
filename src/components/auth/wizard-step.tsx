@@ -21,7 +21,11 @@ export default function WizardStepForm<T extends FieldValues>({
   stepsLength,
 }: WizardStepFormProps<T>) {
   return (
-    <form onSubmit={form.handleSubmit(onSubmit)} className="min-h-screen flex flex-col">
+    <form onSubmit={form.handleSubmit(onSubmit)}
+    style={{
+      minHeight: "100svh"
+    }}
+    className="flex flex-col">
       <div
         className="h-4/5 p-4"
         style={{
