@@ -6,10 +6,8 @@ type SignUpLayoutProps = {
 
 export default function SignUpLayout({ children }: SignUpLayoutProps) {
   return (
-    <div className="p-4">
-      <SignUpProvider>
-        {children}
-      </SignUpProvider>
-    </div>
+    <SignUpProvider>
+      {children}
+    </SignUpProvider>
   )
 }
